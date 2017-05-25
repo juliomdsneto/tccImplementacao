@@ -3,8 +3,6 @@
 #include <cmath>
 #include <vector>
 #include "./lib/QuantummProjectiveMeasure.hpp"
-//0.182574186
-//0.707106781
 
 //void measure(float complex* state, int numqubits, vector<int>qubits_to_measure){
 //passar vector com lista de qubit --> qubit a ser medido
@@ -31,6 +29,7 @@ int main() {
 	state[5] = 0.42857;
 	state[6] = 0.5;
 	state[7] = 0.57142;
+	
 	q_ProjectiveMeasureResolve(state, numqubits, qubits_to_measure);
 
 }
