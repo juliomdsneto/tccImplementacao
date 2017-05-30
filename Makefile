@@ -1,3 +1,3 @@
 all:
-	g++  index.cpp lib/*.cpp -o main
+	g++  index.cpp  lib/*.cpp -o main
 	

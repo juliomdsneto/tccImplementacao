@@ -6,21 +6,26 @@
 #include "QuantummProjectiveMeasure.hpp"
 
 
-
-std::map<int,int> teste, teste1;
-std::pair<std::map<int,int>::iterator,bool> aux;
-
 void q_ProjectiveMeasureResolve (float complex *state, int numqubits, std::vector<int> qubits_to_measure) {
 
-	int mask = 5;
-	int iteracoes = pow(numqubits, 2);
-	int key_value;
+	
 
-	for(int i = 0 ; i < iteracoes; i++){//percorrer o estado
-
-		if(mask & i){
-			teste.insert (std::pair<int,int>(key_value, i));// chave do map, index do estado
-		}
-
-	}
 }
+
+// index = teste[1]
+
+// result[teste[1]] += 
+
+
+
+
+// main () {
+
+// 	calcula_projecao();
+
+// 	map = map();
+
+// 	result = calcula_resultado_pos_mascara(q_states, size, map);
+
+
+// }
