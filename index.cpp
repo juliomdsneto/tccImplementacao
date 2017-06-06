@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstdlib>
 #include <ctime>
+#include <time.h>
 #include <stdint.h>
 #include "./lib/QuantummProjectiveMeasure.hpp"
 
@@ -15,7 +16,7 @@
   //----usar a mascara na posição;  (manuamente por agora) (check)
   //----acumular no map o quadrado de casa posição;   (check)
   //printar chaves do map--inteiro  (check)
-//aplicar funcção de distribuicao uniforme na saida obtida, levando em consideracao a probabilidade de cada ocorrencia
+//aplicar função de distribuicao uniforme na saida obtida, levando em consideracao a probabilidade de cada ocorrencia
 
 // enum{
 //    // Assumes W = 32 (omitting this)
@@ -86,19 +87,30 @@
 
 int main() {
 
-	std::map<int,float complex> test;
-	std::pair<std::map<int,float complex>::iterator,bool> aux;
-
+	std::map<int,float> test;
+	std::pair<std::map<int,float>::iterator,bool> aux;
 
 	int numqubits = 3;
-	int iteracoes = pow(2, numqubits);
-	int mask = 5; // provisorio
-	int value_generated;
-
+	int iterations = pow(2, numqubits);
+	int mask = 0; // provisorio
+	
+	float Generated_Value = 0;
+	float acumulador = 0;
+	
 	std::vector<int> qubits_to_measure;
 
-	float complex *state = new float complex[iteracoes];
-	
+	qubits_to_measure.push_back(1);
+
+	qubits_to_measure.push_back(2); //110
+
+	for(int i = 0; i < qubits_to_measure.size(); i++){
+
+		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1)  ;
+	}
+
+	std:: cout << mask << std::endl;
+
+	float complex *state = new float complex[iterations];
 	state[0] = 0.071428571;
 	state[1] = 0.142857143;
 	state[2] = 0.214285714;
@@ -108,30 +120,46 @@ int main() {
 	state[6] = 0.5;
 	state[7] = 0.571428571;
 
+	// state[0] = 0.182574186;
+	// state[1] = 0.365148372;
+	// state[2] = 0.547722558;
+	// state[3] = 0.730296743;
 
-	for(int i = 0 ; i < iteracoes ; i++){//percorrer o estado
+	for(int i = 0 ; i < iterations ; i++){//percorrer o estado
 		
 
-		test[mask & i] += cpowf(state[i], 2);
+		test[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 
 	}
 
 
-	for (std::map<int, float complex>::iterator it=test.begin(); it!=test.end(); ++it){
+	for (std::map<int, float>::iterator it=test.begin(); it!=test.end(); ++it){
 	
-    std::cout << it->first << " => " << crealf(it->second) << '\n';
-
-
-	std::srand(std::time(NULL));
-
-
-	value_generated = rand()*1000 + 1;
+    std::cout << it->first << " => " << it->second << '\n';
 
 
 	}
 
 
-	std::cout << value_generated << std::endl;
+	std::srand(std::time(0));
+	
+	Generated_Value = rand() % 1000 +1;
+
+	for(std::map<int, float>::iterator it=test.begin(); it!=test.end(); ++it) {
+
+		acumulador += it->second * 1000;
+
+		if(Generated_Value < acumulador)  {
+
+			std::cout << "first: " << it->first << std::endl; // indice
+			std::cout << "second: " << it->second << std::endl; // measure
+		}
+
+	}
+
+	std::cout << "Generated_Value: " << Generated_Value << std::endl; // valor geradono random
+
+	//std::cout << test.size() << std::endl;
 
  	
 	//q_ProjectiveMeasureResolve(state, numqubits, qubits_to_measure);

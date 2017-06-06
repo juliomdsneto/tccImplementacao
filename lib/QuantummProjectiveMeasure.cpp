@@ -12,21 +12,3 @@ void q_ProjectiveMeasureResolve (float complex *state, int numqubits, std::vecto
 
 }
 
-
-// index = teste[1]
-
-// result[teste[1]] += 
-
-
-
-
-// main () {
-
-// 	calcula_projecao();
-
-// 	map = map();
-
-// 	result = calcula_resultado_pos_mascara(q_states, size, map);
-
-
-// }
