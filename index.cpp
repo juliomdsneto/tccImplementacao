@@ -151,8 +151,9 @@ int main() {
 
 		if(Generated_Value < acumulador)  {
 
-			std::cout << "first: " << it->first << std::endl; // indice
-			std::cout << "second: " << it->second << std::endl; // measure
+			std::cout << "index: " << it->first << std::endl; // indice
+			std::cout << "measure result: " << it->second << std::endl; // measure
+			break;
 		}
 
 	}
