@@ -1,0 +1,3 @@
+all:
+	g++  *.cpp -fpermissive  lib/*.cpp -o main
+	

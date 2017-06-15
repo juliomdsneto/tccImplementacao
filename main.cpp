@@ -10,10 +10,11 @@
 #include "./lib/RandomNumberGenerator.hpp"
 
 //#==========#
-int main(int argc, char* argv[]) 
-{
+int main(int argc, char* argv[]) {
+
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
-	std::map<int,float> test;
+
+	std::map<int,float> mapping;
 	std::pair<std::map<int,float>::iterator,bool> aux;
 
 	int numqubits = 3;
@@ -26,7 +27,8 @@ int main(int argc, char* argv[])
 
 	qubits_to_measure.push_back(1);
 	qubits_to_measure.push_back(2);
-	int mask =0;
+
+	int mask = 0;
 
 	for(int i = 0; i < qubits_to_measure.size(); i++)
 		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1)  ;
@@ -45,15 +47,16 @@ int main(int argc, char* argv[])
 
 
 	for (int i = 0 ; i < iterations ; i++)
-		test[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
+		mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 
-	for (std::map<int, float>::iterator it=test.begin(); it!=test.end(); ++it)
+	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
 
 	
 	unsigned long int generatedValue = randomGen->random();
 
-	for(std::map<int, float>::iterator it=test.begin(); it!=test.end(); ++it) {
+	for(std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it) {
+
 		acumulador += it->second * 1000;
 
 		if(generatedValue < acumulador){
@@ -65,4 +68,3 @@ int main(int argc, char* argv[])
 	}
 	std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
 }
-
