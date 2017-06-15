@@ -1,3 +1,3 @@
 all:
-	g++  index.cpp -fpermissive  lib/*.cpp -o main
+	g++  *.cpp -fpermissive  lib/*.cpp -lgsl -lgslcblas -lm -o main
 	

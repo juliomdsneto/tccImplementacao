@@ -8,4 +8,4 @@
 
 //void distribuitionProbabilistcUniform(int number);
 
-void q_ProjectiveMeasureResolve(float complex *state, int numqubits, std::vector<int> qubits_to_measure);
+void q_ProjectiveMeasureResolve(float state, int numqubits, std::vector<int> qubits_to_measure);
