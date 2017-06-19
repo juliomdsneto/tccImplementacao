@@ -9,6 +9,9 @@
 #include "./lib/QuantummProjectiveMeasure.hpp"
 #include "./lib/RandomNumberGenerator.hpp"
 
+
+//GSL_RNG_SEED=$(date +%s%N) GSL_RNG_TYPE=mrg ./main
+
 //#==========#
 int main(int argc, char* argv[]) {
 
@@ -19,8 +22,7 @@ int main(int argc, char* argv[]) {
 
 	int numqubits = 3;
 	int iterations = pow(2, numqubits);
-	
-	float Generated_Value = 0;
+
 	float acumulador = 0;
 	
 	std::vector<int> qubits_to_measure;
