@@ -21,16 +21,15 @@ unsigned long int RandomNumberGenerator::gnuUniformRandomGenerator(unsigned long
 
 	unsigned long int uniformValue = 0;
 
-	for(int i = 0; i < n; i++){
-	
-		double uniformSeq = gsl_rng_uniform (r);
 
-		std::cout  << "valor: "<< uniformValue << std::endl;
+	double uniformSeq = gsl_rng_uniform (r)*1000;
 
-		uniformValue = uniformValue * 100;
-	}
-	
+	//std::cout  << "valor: "<< uniformValue << std::endl;
+
+	uniformValue = uniformSeq;
+
+
 	gsl_rng_free(r);
 	
-	return ;
+	return uniformValue;
 }
