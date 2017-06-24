@@ -12,8 +12,6 @@ unsigned long int RandomNumberGenerator::gnuUniformRandomGenerator(unsigned long
 	const gsl_rng_type* T;
 	gsl_rng* r;
 
-	int n = 5;
-
 	gsl_rng_env_setup();
 
 	T = gsl_rng_default;

@@ -1,19 +1,21 @@
 #include <iostream>
 #include <complex.h>
 #include <cmath>
+#include <omp.h>
 #include <vector>
 #include <cstdlib>
-#include <ctime>
-#include <time.h>
 #include <stdint.h>
 #include "./lib/QuantummProjectiveMeasure.hpp"
 #include "./lib/RandomNumberGenerator.hpp"
+
+
 
 
 //GSL_RNG_SEED=$(date +%s%N) GSL_RNG_TYPE=mrg ./main
 //mrg = multiple-recursive generator 
 //#==========#
 int main(int argc, char* argv[]) {
+
 
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
@@ -32,11 +34,10 @@ int main(int argc, char* argv[]) {
 
 	int mask = 0;
 
-	for(int i = 0; i < qubits_to_measure.size(); i++)
+	for(unsigned int i = 0; i < qubits_to_measure.size(); i++)
 		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1)  ;
 
-	std:: cout << mask << std::endl;
-
+	
 	float *state = new float[iterations];
 	state[0] = 0.071428571;
 	state[1] = 0.142857143;
@@ -48,8 +49,11 @@ int main(int argc, char* argv[]) {
 	state[7] = 0.571428571;
 
 
-	for (int i = 0 ; i < iterations ; i++)
+	#pragma omp parallel for schedule(static)
+	for (int i = 0 ; i < iterations ; i++){
+		#pragma omp critical
 		mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
+}
 
 	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
