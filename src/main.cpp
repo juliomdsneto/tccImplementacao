@@ -5,8 +5,7 @@
 #include <vector>
 #include <cstdlib>
 #include <stdint.h>
-#include "./lib/QuantummProjectiveMeasure.hpp"
-#include "./lib/RandomNumberGenerator.hpp"
+#include "../lib/RandomNumberGenerator.hpp"
 
 
 
