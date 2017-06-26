@@ -4,6 +4,7 @@
 #include <omp.h>
 #include <vector>
 #include <cstdlib>
+#include <map>
 #include <stdint.h>
 #include "../lib/RandomNumberGenerator.hpp"
 
@@ -30,6 +31,7 @@ int main(int argc, char* argv[]) {
 
 	qubits_to_measure.push_back(1);
 	qubits_to_measure.push_back(2);
+	qubits_to_measure.push_back(0);
 
 	int mask = 0;
 
@@ -48,11 +50,12 @@ int main(int argc, char* argv[]) {
 	state[7] = 0.571428571;
 
 
+
 	#pragma omp parallel for schedule(static)
 	for (int i = 0 ; i < iterations ; i++){
 		#pragma omp critical
 		mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
-}
+	}
 
 	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
