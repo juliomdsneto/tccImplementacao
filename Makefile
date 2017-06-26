@@ -1,3 +1,5 @@
 all:
-	g++  index.cpp  lib/*.cpp -o main
-	
+	g++ -Wall -Werror  lib/*.cpp src/*.cpp -lgsl -lgslcblas -lm -fopenmp  -o main
+
+run:
+	./main
