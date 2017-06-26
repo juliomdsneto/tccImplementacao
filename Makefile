@@ -3,10 +3,15 @@ CPPFLAGS=-Wall -Werror -lgsl -lgslcblas -lm -fopenmp
 SOURCEDIRS=lib/*.cpp src/*.cpp
 OUTFILE=main
 
+SEED=`date +%s%N`
+RNG_TYPE=mrg
+
+
 all:
 	$(COMPILER) $(CPPFLAGS) $(SOURCEDIRS) -o build/$(OUTFILE)
+	cp build/main bin/
 
 run:
-	GSL_RNG_SEED=$(date +%s%N) GSL_RNG_TYPE=mrg \
-				 /usr/bin/time bin/main \
-				 &>>logs/output`date +%y%m%d%H%M`.txt	
+	export GSL_RNG_SEED=$(SEED)
+	export GSL_RNG_TYPE=$(RNG_TYPE)
+	bin/main &>>logs/output`date +%y%m%d%H%M`.txt	

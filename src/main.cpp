@@ -1,18 +1,13 @@
 #include <iostream>
-#include <complex.h>
+#include <map>
 #include <cmath>
-#include <omp.h>
 #include <vector>
 #include <cstdlib>
 #include <stdint.h>
+#include <complex.h>
+#include <omp.h>
 #include "../lib/RandomNumberGenerator.hpp"
 
-
-
-
-//GSL_RNG_SEED=$(date +%s%N) GSL_RNG_TYPE=mrg ./main
-//mrg = multiple-recursive generator 
-//#==========#
 int main(int argc, char* argv[]) {
 
 
@@ -52,7 +47,7 @@ int main(int argc, char* argv[]) {
 	for (int i = 0 ; i < iterations ; i++){
 		#pragma omp critical
 		mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
-}
+	}
 
 	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
