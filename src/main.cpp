@@ -1,19 +1,14 @@
 #include <iostream>
-#include <complex.h>
+#include <map>
 #include <cmath>
-#include <omp.h>
 #include <vector>
 #include <cstdlib>
 #include <map>
 #include <stdint.h>
+#include <complex.h>
+#include <omp.h>
 #include "../lib/RandomNumberGenerator.hpp"
 
-
-
-
-//GSL_RNG_SEED=$(date +%s%N) GSL_RNG_TYPE=mrg ./main
-//mrg = multiple-recursive generator 
-//#==========#
 int main(int argc, char* argv[]) {
 
 

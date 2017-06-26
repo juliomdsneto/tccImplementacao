@@ -10,4 +10,4 @@ TO COMPILE
 TO RUN
 =================
 
-- make run.
+- ./run.sh
