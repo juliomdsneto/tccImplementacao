@@ -1,3 +1,4 @@
+
 COMPILER=g++
 CPPFLAGS=-Wall -Werror -lgsl -lgslcblas -lm -fopenmp
 SOURCEDIRS=lib/*.cpp src/*.cpp
