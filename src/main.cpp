@@ -11,7 +11,6 @@
 
 int main(int argc, char* argv[]) {
 
-
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
 	std::map<int,float> mapping;
@@ -20,6 +19,7 @@ int main(int argc, char* argv[]) {
 	int numqubits = 3;
 	int iterations = pow(2, numqubits);
 
+	float * tmp = new float[iterations];
 	float acumulador = 0;
 	
 	std::vector<int> qubits_to_measure;
@@ -31,9 +31,8 @@ int main(int argc, char* argv[]) {
 	int mask = 0;
 
 	for(unsigned int i = 0; i < qubits_to_measure.size(); i++)
-		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1)  ;
+		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1);
 
-	
 	float *state = new float[iterations];
 	state[0] = 0.071428571;
 	state[1] = 0.142857143;
@@ -44,18 +43,18 @@ int main(int argc, char* argv[]) {
 	state[6] = 0.5;
 	state[7] = 0.571428571;
 
-
-
-	#pragma omp parallel for schedule(static)
+#pragma omp parallel for 
 	for (int i = 0 ; i < iterations ; i++){
-		#pragma omp critical
-		mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
+		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
+	}
+
+	for (int i = 0 ; i < iterations ; i++){
+		mapping[mask & i] += tmp[i];
 	}
 
 	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
 		std::cout << it->first << " => " << it->second << '\n';
 
-	
 	unsigned long int generatedValue = randomGen->random();
 
 	for(std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it) {
