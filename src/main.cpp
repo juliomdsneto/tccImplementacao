@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) {
 	state[4] = 0.357142857;
 	state[5] = 0.428571429;
 	state[6] = 0.5;
+	state[7] = 0.57142;
 
 	q_projetiveMeasure(state, numqubits, qubits_to_measure);
 }
