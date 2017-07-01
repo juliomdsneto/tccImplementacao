@@ -3,35 +3,22 @@
 #include <cmath>
 #include <vector>
 #include <cstdlib>
-#include <map>
 #include <stdint.h>
 #include <complex.h>
 #include <omp.h>
 #include "../lib/RandomNumberGenerator.hpp"
+#include "../lib/q_projetiveMeasure.hpp"
 
 int main(int argc, char* argv[]) {
 
-	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
-
-	std::map<int,float> mapping;
-	std::pair<std::map<int,float>::iterator,bool> aux;
-
 	int numqubits = 3;
 	int iterations = pow(2, numqubits);
-
-	float * tmp = new float[iterations];
-	float acumulador = 0;
 	
 	std::vector<int> qubits_to_measure;
 
 	qubits_to_measure.push_back(1);
 	qubits_to_measure.push_back(2);
 	qubits_to_measure.push_back(0);
-
-	int mask = 0;
-
-	for(unsigned int i = 0; i < qubits_to_measure.size(); i++)
-		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1);
 
 	float *state = new float[iterations];
 	state[0] = 0.071428571;
@@ -41,32 +28,6 @@ int main(int argc, char* argv[]) {
 	state[4] = 0.357142857;
 	state[5] = 0.428571429;
 	state[6] = 0.5;
-	state[7] = 0.571428571;
 
-#pragma omp parallel for 
-	for (int i = 0 ; i < iterations ; i++){
-		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
-	}
-
-	for (int i = 0 ; i < iterations ; i++){
-		mapping[mask & i] += tmp[i];
-	}
-
-	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
-		std::cout << it->first << " => " << it->second << '\n';
-
-	unsigned long int generatedValue = randomGen->random();
-
-	for(std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it) {
-
-		acumulador += it->second * 1000;
-
-		if(generatedValue < acumulador){
-			std::cout << "index: " << it->first << std::endl; // indice
-			std::cout << "measure result: " << it->second << std::endl; // measure
-			break;
-		}
-
-	}
-	std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
+	q_projetiveMeasure(state, numqubits, qubits_to_measure);
 }
