@@ -2,7 +2,7 @@
 #include "q_projetiveMeasure.hpp"
 #include <iostream>	
 
-void q_projetiveMeasure(float *state, int numqubits, std::vector<int> qubits_to_measure){
+void q_projetiveMeasure(float complex *state, int numqubits, std::vector<int> qubits_to_measure){
 
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
