@@ -22,7 +22,6 @@ unsigned long int RandomNumberGenerator::gnuUniformRandomGenerator(unsigned long
 
 	double uniformSeq = gsl_rng_uniform (r)*1000;
 
-	//std::cout  << "valor: "<< uniformValue << std::endl;
 
 	uniformValue = uniformSeq;
 
@@ -31,3 +30,4 @@ unsigned long int RandomNumberGenerator::gnuUniformRandomGenerator(unsigned long
 	
 	return uniformValue;
 }
+	//std::cout  << "valor: "<< uniformValue << std::endl;

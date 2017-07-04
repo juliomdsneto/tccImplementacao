@@ -1,0 +1,657 @@
+QUBITS: 20
+QUBITS a serem lidos: 1
+MEDIA: 0.0667377		DESV %: 0.393992
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0714809		DESV %: 0.303713
+
+QUBITS a serem lidos: 3
+MEDIA: 0.079519		DESV %: 0.088518
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905131		DESV %: 0.0879257
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103745		DESV %: 0.153521
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123111		DESV %: 0.210291
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144499		DESV %: 0.823041
+
+QUBITS a serem lidos: 8
+MEDIA: 0.164016		DESV %: 0.155774
+
+QUBITS a serem lidos: 9
+MEDIA: 0.183066		DESV %: 0.111528
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201862		DESV %: 0.0309361
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220645		DESV %: 0.0906992
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239491		DESV %: 0.067219
+
+QUBITS a serem lidos: 13
+MEDIA: 0.258805		DESV %: 0.141939
+
+QUBITS a serem lidos: 14
+MEDIA: 0.27944		DESV %: 0.0437183
+
+QUBITS a serem lidos: 15
+MEDIA: 0.305017		DESV %: 0.100697
+
+QUBITS a serem lidos: 16
+MEDIA: 0.330813		DESV %: 0.0745066
+
+QUBITS a serem lidos: 17
+MEDIA: 0.362252		DESV %: 0.184837
+
+QUBITS a serem lidos: 18
+MEDIA: 0.401055		DESV %: 0.302645
+
+QUBITS a serem lidos: 19
+MEDIA: 0.465692		DESV %: 1.41308
+
+QUBITS a serem lidos: 20
+MEDIA: 0.571611		DESV %: 0.259366
+
+QUBITS: 21
+QUBITS a serem lidos: 1
+MEDIA: 0.0666697		DESV %: 0.127895
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0714243		DESV %: 0.102675
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0794407		DESV %: 0.0577992
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905215		DESV %: 0.0517432
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103657		DESV %: 0.068882
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123156		DESV %: 0.109478
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144338		DESV %: 0.0741811
+
+QUBITS a serem lidos: 8
+MEDIA: 0.163827		DESV %: 0.294681
+
+QUBITS a serem lidos: 9
+MEDIA: 0.183085		DESV %: 0.146393
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201859		DESV %: 0.0804975
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220653		DESV %: 0.113365
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239439		DESV %: 0.0815515
+
+QUBITS a serem lidos: 13
+MEDIA: 0.258813		DESV %: 0.0865191
+
+QUBITS a serem lidos: 14
+MEDIA: 0.27977		DESV %: 0.0746989
+
+QUBITS a serem lidos: 15
+MEDIA: 0.303126		DESV %: 0.0682953
+
+QUBITS a serem lidos: 16
+MEDIA: 0.328652		DESV %: 0.0802524
+
+QUBITS a serem lidos: 17
+MEDIA: 0.361225		DESV %: 0.15208
+
+QUBITS a serem lidos: 18
+MEDIA: 0.404126		DESV %: 0.166909
+
+QUBITS a serem lidos: 19
+MEDIA: 0.463012		DESV %: 0.0914222
+
+QUBITS a serem lidos: 20
+MEDIA: 0.564623		DESV %: 0.355651
+
+QUBITS a serem lidos: 21
+MEDIA: 0.569679		DESV %: 0.437109
+
+QUBITS: 22
+QUBITS a serem lidos: 1
+MEDIA: 0.0668048		DESV %: 0.49551
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0714777		DESV %: 0.112672
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0794647		DESV %: 0.0758412
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905396		DESV %: 0.0844442
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103659		DESV %: 0.0669244
+
+QUBITS a serem lidos: 6
+MEDIA: 0.12311		DESV %: 0.0991031
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144236		DESV %: 0.126774
+
+QUBITS a serem lidos: 8
+MEDIA: 0.164004		DESV %: 0.258287
+
+QUBITS a serem lidos: 9
+MEDIA: 0.183175		DESV %: 0.0489046
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201864		DESV %: 0.141185
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220665		DESV %: 0.110095
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239498		DESV %: 0.03286
+
+QUBITS a serem lidos: 13
+MEDIA: 0.258895		DESV %: 0.0646957
+
+QUBITS a serem lidos: 14
+MEDIA: 0.27979		DESV %: 0.0688618
+
+QUBITS a serem lidos: 15
+MEDIA: 0.303299		DESV %: 0.0408082
+
+QUBITS a serem lidos: 16
+MEDIA: 0.330681		DESV %: 0.119479
+
+QUBITS a serem lidos: 17
+MEDIA: 0.362413		DESV %: 0.0736342
+
+QUBITS a serem lidos: 18
+MEDIA: 0.403822		DESV %: 0.118839
+
+QUBITS a serem lidos: 19
+MEDIA: 0.466361		DESV %: 0.0445311
+
+QUBITS a serem lidos: 20
+MEDIA: 0.569799		DESV %: 0.0869132
+
+QUBITS a serem lidos: 21
+MEDIA: 0.569811		DESV %: 0.0353445
+
+QUBITS a serem lidos: 22
+MEDIA: 0.569755		DESV %: 0.0273178
+
+QUBITS: 23
+QUBITS a serem lidos: 1
+MEDIA: 0.0669148		DESV %: 0.134509
+
+QUBITS a serem lidos: 2
+MEDIA: 0.071707		DESV %: 0.0886409
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0795356		DESV %: 0.068739
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905689		DESV %: 0.0650863
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103884		DESV %: 0.0594656
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123324		DESV %: 0.195399
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144223		DESV %: 0.182694
+
+QUBITS a serem lidos: 8
+MEDIA: 0.163691		DESV %: 0.378472
+
+QUBITS a serem lidos: 9
+MEDIA: 0.182991		DESV %: 0.280842
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201845		DESV %: 0.0850605
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220719		DESV %: 0.0755284
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239642		DESV %: 0.076114
+
+QUBITS a serem lidos: 13
+MEDIA: 0.259053		DESV %: 0.105265
+
+QUBITS a serem lidos: 14
+MEDIA: 0.279123		DESV %: 0.0613576
+
+QUBITS a serem lidos: 15
+MEDIA: 0.302146		DESV %: 0.122804
+
+QUBITS a serem lidos: 16
+MEDIA: 0.328036		DESV %: 0.0729031
+
+QUBITS a serem lidos: 17
+MEDIA: 0.357385		DESV %: 0.161757
+
+QUBITS a serem lidos: 18
+MEDIA: 0.397453		DESV %: 0.142
+
+QUBITS a serem lidos: 19
+MEDIA: 0.464653		DESV %: 0.0584969
+
+QUBITS a serem lidos: 20
+MEDIA: 0.569653		DESV %: 0.0553422
+
+QUBITS a serem lidos: 21
+MEDIA: 0.569179		DESV %: 0.0565677
+
+QUBITS a serem lidos: 22
+MEDIA: 0.569113		DESV %: 0.0325399
+
+QUBITS a serem lidos: 23
+MEDIA: 0.569116		DESV %: 0.0345145
+
+QUBITS: 24
+QUBITS a serem lidos: 1
+MEDIA: 0.0669668		DESV %: 0.128088
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0717079		DESV %: 0.120301
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0795175		DESV %: 0.0751687
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905468		DESV %: 0.0744045
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103692		DESV %: 0.0680754
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123118		DESV %: 0.173739
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144363		DESV %: 0.0850661
+
+QUBITS a serem lidos: 8
+MEDIA: 0.164227		DESV %: 0.0704024
+
+QUBITS a serem lidos: 9
+MEDIA: 0.183267		DESV %: 0.121779
+
+QUBITS a serem lidos: 10
+MEDIA: 0.202013		DESV %: 0.0916503
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220697		DESV %: 0.11195
+
+QUBITS a serem lidos: 12
+MEDIA: 0.23948		DESV %: 0.0685215
+
+QUBITS a serem lidos: 13
+MEDIA: 0.25912		DESV %: 0.0873942
+
+QUBITS a serem lidos: 14
+MEDIA: 0.279047		DESV %: 0.0690994
+
+QUBITS a serem lidos: 15
+MEDIA: 0.301775		DESV %: 0.0891672
+
+QUBITS a serem lidos: 16
+MEDIA: 0.327203		DESV %: 0.0910771
+
+QUBITS a serem lidos: 17
+MEDIA: 0.357116		DESV %: 0.109445
+
+QUBITS a serem lidos: 18
+MEDIA: 0.399674		DESV %: 0.166133
+
+QUBITS a serem lidos: 19
+MEDIA: 0.466153		DESV %: 0.0499207
+
+QUBITS a serem lidos: 20
+MEDIA: 0.570893		DESV %: 0.0400681
+
+QUBITS a serem lidos: 21
+MEDIA: 0.570896		DESV %: 0.0299449
+
+QUBITS a serem lidos: 22
+MEDIA: 0.570868		DESV %: 0.0358879
+
+QUBITS a serem lidos: 23
+MEDIA: 0.570874		DESV %: 0.0292021
+
+QUBITS a serem lidos: 24
+MEDIA: 0.570962		DESV %: 0.0432533
+
+QUBITS: 25
+QUBITS a serem lidos: 1
+MEDIA: 0.066896		DESV %: 0.165543
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0716597		DESV %: 0.0905645
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0795382		DESV %: 0.135977
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905013		DESV %: 0.0595642
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103655		DESV %: 0.0561248
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123016		DESV %: 0.124576
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144263		DESV %: 0.237503
+
+QUBITS a serem lidos: 8
+MEDIA: 0.164		DESV %: 0.0516201
+
+QUBITS a serem lidos: 9
+MEDIA: 0.182904		DESV %: 0.370689
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201827		DESV %: 0.122202
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220624		DESV %: 0.233543
+
+QUBITS a serem lidos: 12
+MEDIA: 0.23963		DESV %: 0.0675505
+
+QUBITS a serem lidos: 13
+MEDIA: 0.258791		DESV %: 0.109712
+
+QUBITS a serem lidos: 14
+MEDIA: 0.279003		DESV %: 0.0514343
+
+QUBITS a serem lidos: 15
+MEDIA: 0.301055		DESV %: 0.0454961
+
+QUBITS a serem lidos: 16
+MEDIA: 0.326493		DESV %: 0.0838107
+
+QUBITS a serem lidos: 17
+MEDIA: 0.356662		DESV %: 0.161342
+
+QUBITS a serem lidos: 18
+MEDIA: 0.39856		DESV %: 0.115021
+
+QUBITS a serem lidos: 19
+MEDIA: 0.463089		DESV %: 0.0577853
+
+QUBITS a serem lidos: 20
+MEDIA: 0.56923		DESV %: 0.0815079
+
+QUBITS a serem lidos: 21
+MEDIA: 0.569111		DESV %: 0.0316182
+
+QUBITS a serem lidos: 22
+MEDIA: 0.569138		DESV %: 0.0380591
+
+QUBITS a serem lidos: 23
+MEDIA: 0.569087		DESV %: 0.0289163
+
+QUBITS a serem lidos: 24
+MEDIA: 0.569112		DESV %: 0.0329009
+
+QUBITS a serem lidos: 25
+MEDIA: 0.56912		DESV %: 0.0243768
+
+QUBITS: 26
+QUBITS a serem lidos: 1
+MEDIA: 0.0669296		DESV %: 0.208312
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0715172		DESV %: 0.105877
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0794571		DESV %: 0.0918657
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0906366		DESV %: 0.0630289
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103709		DESV %: 0.0801278
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123028		DESV %: 0.179578
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144248		DESV %: 0.161812
+
+QUBITS a serem lidos: 8
+MEDIA: 0.163818		DESV %: 0.221496
+
+QUBITS a serem lidos: 9
+MEDIA: 0.183046		DESV %: 0.13613
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201795		DESV %: 0.141369
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220664		DESV %: 0.0587325
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239365		DESV %: 0.115453
+
+QUBITS a serem lidos: 13
+MEDIA: 0.258836		DESV %: 0.0580259
+
+QUBITS a serem lidos: 14
+MEDIA: 0.279004		DESV %: 0.0643548
+
+QUBITS a serem lidos: 15
+MEDIA: 0.30138		DESV %: 0.0449185
+
+QUBITS a serem lidos: 16
+MEDIA: 0.327053		DESV %: 0.0702456
+
+QUBITS a serem lidos: 17
+MEDIA: 0.35687		DESV %: 0.154986
+
+QUBITS a serem lidos: 18
+MEDIA: 0.399832		DESV %: 0.163666
+
+QUBITS a serem lidos: 19
+MEDIA: 0.462619		DESV %: 0.0668645
+
+QUBITS a serem lidos: 20
+MEDIA: 0.569326		DESV %: 0.0377303
+
+QUBITS a serem lidos: 21
+MEDIA: 0.569344		DESV %: 0.0297935
+
+QUBITS a serem lidos: 22
+MEDIA: 0.569308		DESV %: 0.0259172
+
+QUBITS a serem lidos: 23
+MEDIA: 0.569329		DESV %: 0.0264973
+
+QUBITS a serem lidos: 24
+MEDIA: 0.569366		DESV %: 0.034905
+
+QUBITS a serem lidos: 25
+MEDIA: 0.569363		DESV %: 0.0366035
+
+QUBITS a serem lidos: 26
+MEDIA: 0.569346		DESV %: 0.0358636
+
+QUBITS: 27
+QUBITS a serem lidos: 1
+MEDIA: 0.0668493		DESV %: 0.437452
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0715201		DESV %: 0.0725288
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0795092		DESV %: 0.0657391
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905086		DESV %: 0.0420259
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103665		DESV %: 0.0601488
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123076		DESV %: 0.105051
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144163		DESV %: 0.195779
+
+QUBITS a serem lidos: 8
+MEDIA: 0.163794		DESV %: 0.302439
+
+QUBITS a serem lidos: 9
+MEDIA: 0.182805		DESV %: 0.433983
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201831		DESV %: 0.03611
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220667		DESV %: 0.107499
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239656		DESV %: 0.0629222
+
+QUBITS a serem lidos: 13
+MEDIA: 0.258888		DESV %: 0.133147
+
+QUBITS a serem lidos: 14
+MEDIA: 0.278946		DESV %: 0.0845131
+
+QUBITS a serem lidos: 15
+MEDIA: 0.300474		DESV %: 0.0418667
+
+QUBITS a serem lidos: 16
+MEDIA: 0.326019		DESV %: 0.0732491
+
+QUBITS a serem lidos: 17
+MEDIA: 0.356099		DESV %: 0.186875
+
+QUBITS a serem lidos: 18
+MEDIA: 0.397586		DESV %: 0.175596
+
+QUBITS a serem lidos: 19
+MEDIA: 0.461207		DESV %: 0.203997
+
+QUBITS a serem lidos: 20
+MEDIA: 0.568683		DESV %: 0.0691096
+
+QUBITS a serem lidos: 21
+MEDIA: 0.568554		DESV %: 0.0317704
+
+QUBITS a serem lidos: 22
+MEDIA: 0.568567		DESV %: 0.0263527
+
+QUBITS a serem lidos: 23
+MEDIA: 0.568576		DESV %: 0.0278787
+
+QUBITS a serem lidos: 24
+MEDIA: 0.568612		DESV %: 0.0293688
+
+QUBITS a serem lidos: 25
+MEDIA: 0.568563		DESV %: 0.0278416
+
+QUBITS a serem lidos: 26
+MEDIA: 0.568574		DESV %: 0.0279327
+
+QUBITS a serem lidos: 27
+MEDIA: 0.568611		DESV %: 0.0323789
+
+QUBITS: 28
+QUBITS a serem lidos: 1
+MEDIA: 0.0669416		DESV %: 0.349485
+
+QUBITS a serem lidos: 2
+MEDIA: 0.0715602		DESV %: 0.111042
+
+QUBITS a serem lidos: 3
+MEDIA: 0.0794787		DESV %: 0.0673371
+
+QUBITS a serem lidos: 4
+MEDIA: 0.0905292		DESV %: 0.0576278
+
+QUBITS a serem lidos: 5
+MEDIA: 0.103703		DESV %: 0.0733143
+
+QUBITS a serem lidos: 6
+MEDIA: 0.123102		DESV %: 0.102302
+
+QUBITS a serem lidos: 7
+MEDIA: 0.144281		DESV %: 0.135382
+
+QUBITS a serem lidos: 8
+MEDIA: 0.163912		DESV %: 0.0899528
+
+QUBITS a serem lidos: 9
+MEDIA: 0.183108		DESV %: 0.0728906
+
+QUBITS a serem lidos: 10
+MEDIA: 0.201809		DESV %: 0.115166
+
+QUBITS a serem lidos: 11
+MEDIA: 0.220732		DESV %: 0.063065
+
+QUBITS a serem lidos: 12
+MEDIA: 0.239627		DESV %: 0.0703344
+
+QUBITS a serem lidos: 13
+MEDIA: 0.259034		DESV %: 0.0509059
+
+QUBITS a serem lidos: 14
+MEDIA: 0.278987		DESV %: 0.0524097
+
+QUBITS a serem lidos: 15
+MEDIA: 0.300338		DESV %: 0.0942189
+
+QUBITS a serem lidos: 16
+MEDIA: 0.325389		DESV %: 0.0616066
+
+QUBITS a serem lidos: 17
+MEDIA: 0.355831		DESV %: 0.0936574
+
+QUBITS a serem lidos: 18
+MEDIA: 0.399875		DESV %: 0.159359
+
+QUBITS a serem lidos: 19
+MEDIA: 0.462004		DESV %: 0.234587
+
+QUBITS a serem lidos: 20
+MEDIA: 0.5693		DESV %: 0.0742244
+
+QUBITS a serem lidos: 21
+MEDIA: 0.569165		DESV %: 0.0354698
+
+QUBITS a serem lidos: 22
+MEDIA: 0.569256		DESV %: 0.041832
+
+QUBITS a serem lidos: 23
+MEDIA: 0.56923		DESV %: 0.025204
+
+QUBITS a serem lidos: 24
+MEDIA: 0.569202		DESV %: 0.0384033
+
+QUBITS a serem lidos: 25
+MEDIA: 0.569224		DESV %: 0.0316434
+
+QUBITS a serem lidos: 26
+MEDIA: 0.569216		DESV %: 0.036361
+
+QUBITS a serem lidos: 27
+MEDIA: 0.569232		DESV %: 0.0410794
+
+QUBITS a serem lidos: 28
+MEDIA: 0.569217		DESV %: 0.0360856
+

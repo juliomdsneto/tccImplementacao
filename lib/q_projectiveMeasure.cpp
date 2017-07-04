@@ -1,8 +1,8 @@
 #include "RandomNumberGenerator.hpp"
-#include "q_projetiveMeasure.hpp"
+#include "q_projectiveMeasure.hpp"
 #include <iostream>	
 
-void q_projetiveMeasure(float complex *state, int numqubits, std::vector<int> qubits_to_measure){
+void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> qubits_to_measure){
 
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
@@ -19,7 +19,7 @@ void q_projetiveMeasure(float complex *state, int numqubits, std::vector<int> qu
 		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1);
 
 
-#pragma omp parallel for 
+#pragma omp parallel for num_threads(2) 
 	for (int i = 0 ; i < iterations ; i++){
 		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	}
@@ -28,8 +28,14 @@ void q_projetiveMeasure(float complex *state, int numqubits, std::vector<int> qu
 		mapping[mask & i] += tmp[i];
 	}
 
-	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
-		std::cout << it->first << " => " << it->second << '\n';
+	// for (int i = 0 ; i < iterations ; i++){
+	// 	mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
+	// }
+
+
+
+	// for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
+	// 	std::cout << it->first << " => " << it->second << '\n';
 
 	unsigned long int generatedValue = randomGen->random();
 
@@ -38,12 +44,12 @@ void q_projetiveMeasure(float complex *state, int numqubits, std::vector<int> qu
 		acumulador += it->second * 1000;
 
 		if(generatedValue < acumulador){
-			std::cout << "index: " << it->first << std::endl; // indice
-			std::cout << "measure result: " << it->second << std::endl; // measure
+//			std::cout << "index: " << it->first << std::endl; // indice
+//			std::cout << "measure result: " << it->second << std::endl; // measure
 			break;
 		}
 
-	}
-	std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
+	 }
+	// std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
 
 }
