@@ -40,13 +40,13 @@ void print_statistic(std::vector <float> amostra){
 
 	desv = sqrt(desv/(number-1)) / med * 100.0;
 
-	std::cout << "MEDIA: " << med << "\t\tDESV %: " << desv << "\n" << std::endl;
+	std::cout << med << "\t\tDESV %: " << desv << std::endl;
 
 }
 
 
 int main(int argc, char* argv[]) {
-//atoi argv[1]
+
 	int numqubits = 20;
 
 	std::vector<int> qubits_to_measure;
@@ -68,46 +68,47 @@ int main(int argc, char* argv[]) {
 	// state[6] = 0.5;
 	// state[7] = 0.57142;
 
-	struct timeval timev, tvBegin, tvEnd;
+//	struct timeval timev, tvBegin, tvEnd;
 
-	for(int i = 20; i<29; i++ ){//variando qubits de 20 ate 28
+	// for(int i = 20; i<29; i++ ){//variando qubits de 20 ate 28
 
-		int iterations = pow(2, i);	
+		int iterations = pow(2, numqubits);// i	
 
 		float complex *state = new float complex[iterations]();
 
 		state[0] = 1;
 
-		std::cout << "QUBITS: " << i << std::endl;
+	// 	std::cout << "QUBITS: " << i << std::endl;
 
-		qubits_to_measure.clear();
+	// 	qubits_to_measure.clear();
 
-		for(int j = 0; j < i; j++){//variando quantidade de qubits a serem lidos  
-			qubits_to_measure.push_back(j);
+	// 	for(int j = 0; j < i; j++){//variando quantidade de qubits a serem lidos  
+	// 		qubits_to_measure.push_back(j);
 
-			amostra.clear();
+	// 		amostra.clear();
 
-			std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
+	// 		std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
 
-			for(int k = 0; k<30; k++){//numero de execucoes
+			// for(int k = 0; k<1; k++){//numero de execucoes --- 30
 
 
-				gettimeofday(&tvBegin, NULL);
+			// 	gettimeofday(&tvBegin, NULL);
 
 				q_projectiveMeasure(state, numqubits, qubits_to_measure);
 
 					
-				gettimeofday(&tvEnd, NULL);
-				timeval_subtract(&timev, &tvEnd, &tvBegin);
-				float t = timev.tv_sec + (timev.tv_usec / 1000000.0);
-				amostra.push_back(t);
-			}
+			// 	gettimeofday(&tvEnd, NULL);
+			// 	timeval_subtract(&timev, &tvEnd, &tvBegin);
+			// 	float t = timev.tv_sec + (timev.tv_usec / 1000000.0);
+			// 	amostra.push_back(t);
+			// }
 
-			print_statistic(amostra);
+			// print_statistic(amostra);
 
-		}
+		// }
+		delete(state);
 
 	}
 	
 
-}
+//}

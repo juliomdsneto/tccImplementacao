@@ -19,19 +19,37 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1);
 
 
-#pragma omp parallel for num_threads(2) 
+
+
+#pragma omp parallel for num_threads(4) 
 	for (int i = 0 ; i < iterations ; i++){
 		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	}
 
 	for (int i = 0 ; i < iterations ; i++){
 		mapping[mask & i] += tmp[i];
+
+
+		for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it){
+
+			if(mask == it->first){
+
+				tmp[i] = tmp[i]/it->second;
+				
+				std::cout << "index: " << tmp[i] << std::endl; // indice
+			}
+			else{
+				tmp[i] = 0;
+			}
+
+		}
+
 	}
+
 
 	// for (int i = 0 ; i < iterations ; i++){
 	// 	mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	// }
-
 
 
 	// for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
@@ -50,6 +68,12 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 		}
 
 	 }
+
+
+
+
+
+	 delete(tmp);
 	// std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
 
 }
