@@ -4,8 +4,6 @@
 
 void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> qubits_to_measure){
 
-	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
-
 	std::map<int,float> mapping;
 	std::pair<std::map<int,float>::iterator,bool> aux;
 
@@ -20,6 +18,8 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 
 
+	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
+
 
 #pragma omp parallel for num_threads(4) 
 	for (int i = 0 ; i < iterations ; i++){
@@ -29,21 +29,6 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 	for (int i = 0 ; i < iterations ; i++){
 		mapping[mask & i] += tmp[i];
 
-
-		for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it){
-
-			if(mask == it->first){
-
-				tmp[i] = tmp[i]/it->second;
-				
-				std::cout << "index: " << tmp[i] << std::endl; // indice
-			}
-			else{
-				tmp[i] = 0;
-			}
-
-		}
-
 	}
 
 
@@ -51,9 +36,8 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 	// 	mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	// }
 
-
-	// for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
-	// 	std::cout << it->first << " => " << it->second << '\n';
+	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
+		std::cout << it->first << " => " << it->second << '\n';
 
 	unsigned long int generatedValue = randomGen->random();
 
@@ -63,17 +47,27 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 		if(generatedValue < acumulador){
 //			std::cout << "index: " << it->first << std::endl; // indice
-//			std::cout << "measure result: " << it->second << std::endl; // measure
+			std::cout << "measure result: " << it->second << std::endl; // measure
 			break;
 		}
 
 	 }
 
 
+	 std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
+		for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it){
+			
+			std::cout << it->first << std::endl;
+			if(mask == it->first){
+				it->second = it->second/sqrt(it->second);
+				
+				std::cout << "valor normalizado: " << it->second << std::endl; // indice
+			}
+			else{
+				it->second = 0;			}
 
+		}
 
-
-	 delete(tmp);
-	// std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
+		delete(tmp);
 
 }
