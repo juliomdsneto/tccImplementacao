@@ -9,14 +9,14 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 	int iterations = pow(2, numqubits);
 	int mask = 0;
+	int measured_index;
 
+	float normalizacao;
 	float * tmp = new float[iterations];
 	float acumulador = 0;
 
 	for(unsigned int i = 0; i < qubits_to_measure.size(); i++)
 		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1);
-
-
 
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
@@ -36,8 +36,8 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 	// 	mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	// }
 
-	for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
-		std::cout << it->first << " => " << it->second << '\n';
+	// for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
+	// 	std::cout << it->first << " => " << it->second << '\n';
 
 	unsigned long int generatedValue = randomGen->random();
 
@@ -46,7 +46,10 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 		acumulador += it->second * 1000;
 
 		if(generatedValue < acumulador){
-//			std::cout << "index: " << it->first << std::endl; // indice
+			measured_index = it->first;
+			normalizacao = it->second;
+
+			std::cout << "index: " << it->first << std::endl; // indice
 			std::cout << "measure result: " << it->second << std::endl; // measure
 			break;
 		}
@@ -54,16 +57,16 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 	 }
 
 
-	 std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
-
-
-
-		for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it) {
-			if(mask == it->first) {
-				it->second = it->second/sqrt(it->second);
-			} else {
-				it->second = 0;			
-			}
+//	 std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
+#pragma omp parallel for num_threads(4)
+	for (int i =0; i < iterations; i++) {
+		if((mask & i) == measured_index) {
+			state[i] = state[i]/sqrt(normalizacao);
+			std::cout << i <<" normalizado " << std::endl;
 		}
-		delete(tmp);
+		else {			
+			state[i] = 0;			
+		}
+	}
+	delete(tmp);
 }
