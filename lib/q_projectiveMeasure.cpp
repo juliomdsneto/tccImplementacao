@@ -55,19 +55,15 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 
 	 std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
-		for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it){
-			
-			std::cout << it->first << std::endl;
-			if(mask == it->first){
+
+
+
+		for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it) {
+			if(mask == it->first) {
 				it->second = it->second/sqrt(it->second);
-				
-				std::cout << "valor normalizado: " << it->second << std::endl; // indice
+			} else {
+				it->second = 0;			
 			}
-			else{
-				it->second = 0;			}
-
 		}
-
 		delete(tmp);
-
 }
