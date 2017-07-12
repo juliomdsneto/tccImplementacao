@@ -40,7 +40,7 @@ void print_statistic(std::vector <float> amostra){
 
 	desv = sqrt(desv/(number-1)) / med * 100.0;
 
-	std::cout << med << "\t\tDESV %: " << desv << std::endl;
+	std::cout << med << "\n \t\tDESV %: " << desv << std::endl;
 
 }
 
@@ -90,7 +90,7 @@ int main(int argc, char* argv[]) {
 
 			amostra.clear();
 
-			std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
+			//std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
 
 			for(int k = 0; k<30; k++){//numero de execucoes --- 30
 
