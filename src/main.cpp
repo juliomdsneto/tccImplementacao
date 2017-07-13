@@ -47,7 +47,7 @@ void print_statistic(std::vector <float> amostra){
 
 int main(int argc, char* argv[]) {
 
-	int numqubits = 20;
+	//int numqubits = 20;
 
 	std::vector<int> qubits_to_measure;
 
@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 	// state[7] = 0.57142;
 
 
-		std::cout << "QUBITS: " << i << std::endl;
+	//	std::cout << "QUBITS: " << i << std::endl;
 
 		qubits_to_measure.clear();
 
@@ -97,7 +97,7 @@ int main(int argc, char* argv[]) {
 
 				gettimeofday(&tvBegin, NULL);
 
-				q_projectiveMeasure(state, numqubits, qubits_to_measure);
+				q_projectiveMeasure(state, i, qubits_to_measure);
 
 					
 				gettimeofday(&tvEnd, NULL);
