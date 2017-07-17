@@ -92,7 +92,7 @@ int main(int argc, char* argv[]) {
 
 			//std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
 
-			for(int k = 0; k<10; k++){//numero de execucoes --- 30
+			for(int k = 0; k<1; k++){//numero de execucoes --- 30
 
 
 				gettimeofday(&tvBegin, NULL);
