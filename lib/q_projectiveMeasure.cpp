@@ -25,7 +25,7 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
-#pragma omp parallel for num_threads(2) 
+#pragma omp parallel for num_threads(4) 
 	for (int i = 0 ; i < iterations ; i++){
 		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	}
@@ -58,7 +58,7 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 	 }
 
 //	 std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
-#pragma omp parallel for num_threads(2)
+#pragma omp parallel for num_threads(4)
 	for (int i =0; i < iterations; i++) {
 		if((mask & i) == measured_index) {
 			state[i] = state[i]/sqrt(normalization);

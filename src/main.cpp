@@ -81,7 +81,7 @@ int main(int argc, char* argv[]) {
 	// state[7] = 0.57142;
 
 
-	//	std::cout << "QUBITS: " << i << std::endl;
+		std::cout << "QUBITS: " << i << std::endl;
 
 		qubits_to_measure.clear();
 
@@ -92,7 +92,7 @@ int main(int argc, char* argv[]) {
 
 			//std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
 
-			for(int k = 0; k<30; k++){//numero de execucoes --- 30
+			for(int k = 0; k<10; k++){//numero de execucoes --- 30
 
 
 				gettimeofday(&tvBegin, NULL);
