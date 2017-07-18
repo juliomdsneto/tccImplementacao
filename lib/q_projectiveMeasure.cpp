@@ -9,14 +9,12 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 	int iterations = pow(2, numqubits);
 	int mask = 0;
-	int measured_index;
+	int measured_index = 0;
 
 	
-	float normalization;
+	float normalization = 0;
 	float * tmp = new float[iterations];
 	float acumulador = 0;
-
-	//TIME
 
 	for(unsigned int i = 0; i < qubits_to_measure.size(); i++)
 		mask = mask | 1 << (numqubits - qubits_to_measure[i] - 1);
@@ -68,4 +66,5 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 		}
 	}
 	delete(tmp);
+	delete(randomGen);
 }	
