@@ -13,7 +13,7 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 	
 	float normalization = 0;
-	float * tmp = new float[iterations];
+	//float * tmp = new float[iterations];
 	float acumulador = 0;
 
 	for(unsigned int i = 0; i < qubits_to_measure.size(); i++)
@@ -23,20 +23,20 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 
 	RandomNumberGenerator* randomGen = new RandomNumberGenerator();
 
-#pragma omp parallel for num_threads(4) 
-	for (int i = 0 ; i < iterations ; i++){
-		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
-	}
+// #pragma omp parallel for num_threads(4) 
+// 	for (int i = 0 ; i < iterations ; i++){
+// 		tmp[i] = pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
+// 	}
+
+// 	for (int i = 0 ; i < iterations ; i++){
+// 		mapping[mask & i] += tmp[i];
+
+// 	}
+
 
 	for (int i = 0 ; i < iterations ; i++){
-		mapping[mask & i] += tmp[i];
-
+		mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
 	}
-
-
-	// for (int i = 0 ; i < iterations ; i++){
-	// 	mapping[mask & i] += pow(crealf(state[i]), 2) + pow(cimagf(state[i]), 2);
-	// }
 
 
 	// for (std::map<int, float>::iterator it=mapping.begin(); it!=mapping.end(); ++it)
@@ -56,7 +56,7 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 	 }
 
 //	 std::cout << "Generated_Value: " << generatedValue << std::endl; // valor gerado no random
-#pragma omp parallel for num_threads(4)
+//#pragma omp parallel for num_threads(4)
 	for (int i =0; i < iterations; i++) {
 		if((mask & i) == measured_index) {
 			state[i] = state[i]/sqrt(normalization);
@@ -65,6 +65,6 @@ void q_projectiveMeasure(float complex *state, int numqubits, std::vector<int> q
 			state[i] = 0;			
 		}
 	}
-	delete(tmp);
+//	delete(tmp);
 	delete(randomGen);
 }	
