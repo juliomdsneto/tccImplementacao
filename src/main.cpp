@@ -62,7 +62,7 @@ int main(int argc, char* argv[]) {
 
 	struct timeval timev, tvBegin, tvEnd;
 
-	for(int i = 28; i<29; i++ ){//variando qubits de 20 ate 28
+	for(int i = 25; i<29; i++ ){//variando qubits de 20 ate 28
 
 		int iterations = pow(2, i);// i	
 
@@ -92,7 +92,7 @@ int main(int argc, char* argv[]) {
 
 			//std::cout << "QUBITS a serem lidos: " << qubits_to_measure.size() << std::endl;			
 
-			for(int k = 0; k<3; k++){//numero de execucoes --- 30
+			for(int k = 0; k<15; k++){//numero de execucoes --- 30
 
 
 				gettimeofday(&tvBegin, NULL);
